@@ -1,0 +1,140 @@
+.carrito,
+.carrito__navbottom{
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transition: transform .3s ease-in-out;
+  -webkit-transition: transform .3s ease-in-out;
+  -moz-transition: transform .3s ease-in-out;
+  -ms-transition: transform .3s ease-in-out;
+  -o-transition: transform .3s ease-in-out;
+}
+.carrito.active,
+.carrito__navbottom.active{
+  visibility: visible;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transition: transform .3s ease-in-out;
+  -webkit-transition: transform .3s ease-in-out;
+  -moz-transition: transform .3s ease-in-out;
+  -ms-transition: transform .3s ease-in-out;
+  -o-transition: transform .3s ease-in-out;
+}
+
+
+.carrito{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.carrito__navbottom{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1100;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: var(--sombra);
+}
+
+.carrito__navbottom a{
+  text-decoration: none;
+}
+
+.price__carrito,
+.length__carrito{
+  color: var(--color-primario);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.carrito_producto{
+  height: min-content;
+  box-shadow: var(--sombra);
+}
+.producto-contenedor{
+  margin-bottom: 1rem;
+}
+.producto-contenedor:last-child{
+  margin-bottom: 150px;
+}
+.carrito_titleProducto{
+  margin: 0;
+}
+.carrito_detalleProducto{
+  position: absolute;
+  bottom: .5rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.carrito_cantidadProducto{
+  text-align: right;
+  margin-bottom: .5rem;
+}
+
+.carrito_precioProducto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 100px;
+  color: #fff;
+  background-color: var(--color-primario);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.container.h-auto{
+  height: auto;
+}
+
+.btnEliminarProductoCarrito{
+  position: absolute;
+  z-index: 100;
+  right: 2px;
+  top: .55rem;
+}
+
+.imagen-carrito{
+  min-height: 166px;
+}
+
+.imagen-carrito img{
+  object-fit: cover;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .imagen-carrito{
+    height: 300px;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .carrito{
+    box-shadow: var(--sombra);
+    width: 40%;
+  }
+  .carrito__navbottom{
+    width: 40%;
+  }
+
+  .carrito .tb-2.logo-ukunta-header{
+    min-width: 25%;
+  }
+}

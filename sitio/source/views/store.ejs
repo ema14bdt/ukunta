@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %>
+
+   <body data-observer>
+      <%- include('partials/carrito.ejs') %>
+         <header class="header">
+            <%- include('./partials/navbar-top') %>
+               <section class="combos sep-inf">
+                  <article>
+                     <div class="combos__carrousel">
+                        <img src="/images/headerMain-5.jpg" alt="black-off" />
+                     </div>
+                  </article>
+               </section>
+         </header>
+         <%- include('./partials/navbar-bottom') %>
+            <!-- Botones de categorias -->
+
+            <%- include('partials/categories.ejs') %>
+               <!-- Filtro y Busqueda de Productos -->
+               <div class="container filtro_busqueda ptp-5 f-main-end" id="store">
+                  <div class="lp-6 filter__orden">
+                     <form action="">
+                        <label for=""><strong>Ordenar por:</strong></label>
+                        <select name="filtro" id="filterProducts">
+                           <option value="" selected>Más relevante</option>
+                           <option value="asc">Menor precio</option>
+                           <option value="desc">Mayor precio</option>
+                        </select>
+                     </form>
+                  </div>
+               </div>
+               <main class="container productos_tienda ptp-5">
+                  <!-- Todos los producto -->
+               </main>
+
+               <%- include('./partials/footer') %>
+
+      <template id="producto-store">
+         <article class="mb-12 tb-6 lp-4 container producto shadow-drop-2-center">
+
+            <div class="button--stock">
+               <i class="fas fa-check boton_check"></i>
+            </div>
+            
+            <div class="concon">
+               <div class="mb-5 imagen-producto__store">
+                  <!-- Imagen del producto -->
+                  <img src=""alt="" />
+               </div>
+
+               <div class="mb-7 f-main-y">
+                  <div>
+                     <!-- Nombre del producto -->
+                     <h4 class="producto__title"></h4>
+                     <!-- Descripción del producto -->
+                     <p class="producto__description"></p>
+                  </div>
+
+                  <div class="producto__buttons">
+                     <div class="f-display">
+                        <!-- Link para el detalle del producto -->
+                        <a href="/store/products/idProducto" class="producto__detail">
+                           <div class="button producto__vermas mr-1">
+                              <i class="fas fa-external-link-alt"></i>
+                           </div>
+                        </a>
+                     </div>
+
+                     <div class="controlador-buton-precio">
+                        <!-- Precio producto -->
+                        <div class="precio_store"></div>
+
+                        <!-- data-stock y data-id del producto -->
+                        <button class="button buton_redondo_suma fas fa-plus btnRel-add-carrito"></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </article>
+
+      </template>
+
+   </body>
+   <script src="/js/generals.js" type="module"></script>
+   <script src="/js/store.js" type="module"></script>
+   <script src="/js/search.js"></script>
+
+</html>
